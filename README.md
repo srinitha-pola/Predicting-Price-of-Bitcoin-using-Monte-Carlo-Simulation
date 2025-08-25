@@ -1,6 +1,6 @@
 # Monte Carlo Simulation for Predicting Bitcoin Price using GBM
 
-## 📌 Overview
+## Overview
 This project implements a **Monte Carlo Simulation (MCS)** framework to forecast **Bitcoin price dynamics** using the **Geometric Brownian Motion (GBM)** model.  
 
 To handle the **massive number of simulation paths** required for reliable forecasting, the project leverages **High-Performance Computing (HPC)** techniques:  
@@ -11,7 +11,7 @@ The combination enables simulation of **millions to billions of paths**, making 
 
 ---
 
-## ⚡ Motivation
+## Motivation
 Bitcoin is highly volatile and difficult to predict deterministically. Instead of producing a single-point forecast, **Monte Carlo simulations generate a distribution of possible future prices**, allowing us to study:
 - Expected values  
 - Confidence intervals  
@@ -19,7 +19,7 @@ Bitcoin is highly volatile and difficult to predict deterministically. Instead o
 
 ---
 
-## 🔬 Methodology
+## Methodology
 
 ### 1. Model: Geometric Brownian Motion (GBM)
 The GBM model describes the price evolution as:
@@ -50,7 +50,7 @@ $$
 
 ---
 
-## 🖥️ HPC Implementation
+##  HPC Implementation
 
 ### Sequential C++ (Baseline)
 - Straightforward loop over all paths  
