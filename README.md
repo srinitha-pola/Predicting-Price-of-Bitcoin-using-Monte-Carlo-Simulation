@@ -1,4 +1,4 @@
-# Monte Carlo Simulation for Predicting Bitcoin Price using GBM
+# Monte Carlo Simulation for Predicting Bitcoin Price using Monte Carlo Simulation and HPC
 
 ## Overview
 This project implements a **Monte Carlo Simulation (MCS)** framework to forecast **Bitcoin price dynamics** using the **Geometric Brownian Motion (GBM)** model.  
