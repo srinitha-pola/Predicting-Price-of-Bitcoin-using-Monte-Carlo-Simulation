@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
+#include <chrono>
 using namespace std;
-
 
 vector<string> split(const string& s, char delimiter) {
     vector<string> tokens;
@@ -9,7 +9,6 @@ vector<string> split(const string& s, char delimiter) {
     while (getline(ss, token, delimiter)) tokens.push_back(token);
     return tokens;
 }
-
 
 vector<double> readCSV(const string& filename) {
     ifstream file(filename);
@@ -33,7 +32,9 @@ vector<double> readCSV(const string& filename) {
 }
 
 int main() {
-    string filename = "bitcoin(3).csv";
+    auto start = std::chrono::high_resolution_clock::now();
+
+    string filename = "aapl_stock_data.csv";
     vector<double> prices = readCSV(filename);
 
     if (prices.size() < 60) {
@@ -71,7 +72,7 @@ int main() {
     double mu = rollingMean + 0.5 * sigma * sigma; 
 
     int days = 30;
-    int simulations = 5000; 
+    int simulations = 20000; 
 
     double lastPrice = prices[prices.size() - days - 1];
     double actualFuturePrice = prices.back();
@@ -117,6 +118,10 @@ int main() {
     cout << "MAE: " << mae << endl;
     cout << "MAPE: " << mape << "%" << endl;
     cout << "Coverage (inside 5%-95% interval): " << (covered ? "YES" : "NO") << endl;
+
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    cout << "Execution time: " << duration.count() << " ms" << endl;
 
     return 0;
 }
