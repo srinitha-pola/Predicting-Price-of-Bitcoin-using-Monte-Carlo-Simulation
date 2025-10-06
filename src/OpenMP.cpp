@@ -110,7 +110,7 @@ int main() {
     bool covered = (actualFuturePrice >= p5 && actualFuturePrice <= p95);
 
     cout << fixed << setprecision(2);
-    cout << "=== GBM + Monte Carlo Prediction with OpenMP(30 days) ===" << endl;
+    cout << "=== GBM + Monte Carlo Prediction with OpenMP===" << endl;
     cout << "Start Price: " << lastPrice << endl;
     cout << "Estimated Drift (mu): " << mu << endl;
     cout << "Estimated Volatility (sigma): " << sigma << endl;
