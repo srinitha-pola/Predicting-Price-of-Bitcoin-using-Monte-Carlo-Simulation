@@ -145,7 +145,7 @@ int main(int argc, char** argv) {
         bool covered = (actualFuturePrice >= p5 && actualFuturePrice <= p95);
 
         cout << fixed << setprecision(2);
-        cout << "=== GBM + Monte Carlo Prediction (30 days) ===" << endl;
+        cout << "=== GBM + Monte Carlo Prediction using MPI ===" << endl;
         cout << "Start Price: " << lastPrice << endl;
         cout << "Estimated Drift (mu): " << mu << endl;
         cout << "Estimated Volatility (sigma): " << sigma << endl;
